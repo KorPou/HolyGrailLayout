@@ -1,6 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,100&display=swap');
+
 * {
     padding: 0;
     margin: 0;
+}
+
+:root{
+    --lovelyGradientColor1:#77037B;
+    --lovelyGradientColor2:#F9E2AF;
+
+
 }
 
 .body {
@@ -9,7 +18,12 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(12, 1fr) ;
+    font-family: 'Josefin Sans', sans-serif;
 }
+
+
+
+
 .navbar {
     background-color: aquamarine;
     grid-column: 1/span 12;
@@ -34,7 +48,53 @@
 }
 
 .content {
-    background-color: aquamarine;
+    background-color: linear-gradient(45deg, var(--lovelyGradientColor1), var(--lovelyGradientColor2));
         grid-column: 3/span 8;
         grid-row: 2/span 10;
+}
+
+/*Tablets Media Query*/
+@media screen and (max-width:1024px) {
+    
+.leftpanel {
+        background-color: rgb(255, 127, 217);
+        grid-column: 1/span 3;
+        grid-row: 2/span 5;
+    }
+
+    .rightpanel {
+        background-color: rgb(255, 127, 217);
+        grid-column: 10/span 3;
+        grid-row: 2/span 10;
+    }
+
+    .content {
+        background-color:rgb(255, 127, 217);
+        grid-column: 4/span 6;
+        grid-row: 2/span 10;
+        background: linear-gradient(45deg, var(--lovelyGradientColor1), var(--lovelyGradientColor2))
+    }
+
+}
+
+@media screen and (max-width:767px) {
+
+    .leftpanel {
+        background-color: rgb(218, 118, 51);
+        grid-column: 1/span 1;
+        grid-row: 2/span 5;
+    }
+
+    .rightpanel {
+        background-color: rgb(218, 118, 51);
+        grid-column: 12/span 1;
+        grid-row: 2/span 10;
+    }
+
+    .content {
+        background-color:linear-gradient(45deg, var(--lovelyGradientColor1), var(--lovelyGradientColor2))
+        grid-column: 2/span 10;
+        grid-row: 2/span 10;
+    }
+
 }
