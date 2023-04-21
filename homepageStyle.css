@@ -1,0 +1,32 @@
+:root {
+    --c1: #5D3891;
+    --c2: #F99417;
+    --c3: #E8E2E2;
+    --c4: #F5F5F5;
+    --c5: #A61F69;
+    --c6: #400E32;
+}
+
+.animated-bg {
+    background:
+        radial-gradient(ellipse at top, var(--c1), var(--c2), var(--c3), transparent),
+        radial-gradient(ellipse at bottom, var(--c4), var(--c5), var(--c6), transparent);
+    
+        background-size: 400% 400%;
+
+    -webkit-animation: animated_gradient 12s ease-in-out infinite;
+    }
+
+@-webkit-keyframes animated_gradient {
+    0% {
+        background-position: 50% 100%;
+    }
+
+    50% {
+        background-position: -50% 0;
+    }
+
+    100% {
+        background-position: 50% 100%;
+    }
+}
